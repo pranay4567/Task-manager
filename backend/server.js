@@ -25,7 +25,7 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // CORS configuration
-const allowedOrigins = ['http://localhost:3005', 'http://localhost'];
+const allowedOrigins = ['http://44.204.30.85:3005', 'http://localhost'];
 
 app.use(cors({
     origin: (origin, callback) => {
