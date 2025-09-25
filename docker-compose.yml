@@ -12,7 +12,7 @@ services:
       - PORT=5000
       - NODE_ENV=development
       - JWT_SECRET=your-secret-key
-      - CORS_ORIGIN=http://localhost:3005,http://localhost:3000
+      - CORS_ORIGIN=http://44.204.30.85:3005,http://localhost:3000
     networks:
       - taskflow-net
 
@@ -21,12 +21,12 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        - REACT_APP_API_URL=http://localhost:5000
+        - REACT_APP_API_URL=http://44.204.30.85:5000
     container_name: frontend
     ports:
       - "3005:3000"
     environment:
-      - REACT_APP_API_URL=http://localhost:5000
+      - REACT_APP_API_URL=http://44.204.30.85:5000
     networks:
       - taskflow-net
     depends_on:
