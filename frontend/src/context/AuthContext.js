@@ -13,7 +13,7 @@ export const useAuth = () => {
 };
 
 // Configure axios defaults
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "http://44.204.30.85:5000";
 axios.defaults.headers.common['Content-Type'] = 'application/json';
 
 export const AuthProvider = ({ children }) => {
